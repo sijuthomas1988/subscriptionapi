@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Subscription API
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+server:
+  port: 8080
+  servlet:
+    context-path: /subscriptionapi
+
+#Health and Metrics
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics
