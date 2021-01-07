@@ -86,7 +86,7 @@ public class SubscriptionControllerTest {
         MockHttpServletResponse response = result.getResponse();
         int status = response.getStatus();
         ErrorDetails errorDetails = objectMapper.readValue(response.getContentAsString(), ErrorDetails.class);
-        Assert.assertEquals(403, status);
+        Assert.assertEquals(304, status);
         Assert.assertNotNull(response);
         Assert.assertEquals(errorDetails.getSubscriptionStatus(), SubscriptionStatus.CANCELLED.name());
     }
