@@ -24,7 +24,7 @@ public class ServiceException  extends Exception {
      * @param code
      *     status code
      * @param message
-     *     error message
+     *     error messages
      */
     public ServiceException(String code, String status, String message) {
         super(message);
